@@ -14,10 +14,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: calc(100% - 60px);
+    width: 375px;
 
     @include xl-min {
-      width: calc(100% - 120px);
+      width: 650px;
     }
   }
 
