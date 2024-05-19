@@ -1791,7 +1791,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 375px;
+  width: calc(100% - 16px);
+}
+@media (min-width: 768px) {
+  .contact--popup {
+    width: 375px;
+  }
 }
 @media (min-width: 1440px) {
   .contact--popup {

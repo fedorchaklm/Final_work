@@ -14,7 +14,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 375px;
+    width: calc(100% - 16px);
+
+    @include md-min {
+      width: 375px;
+    }
 
     @include xl-min {
       width: 650px;
