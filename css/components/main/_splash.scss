@@ -1,0 +1,295 @@
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  // box-shadow: inset 0 0 5px grey;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.splash {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: $color-gradient-supersoft;
+  padding-bottom: 60px;
+  border-radius: 0px 0px 12px 12px;
+
+  @include md-min {
+    gap: 60px;
+  }
+
+  &--spec {
+    gap: 30px;
+  }
+
+  .container {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+
+    @include md-min {
+      height: 1024px;
+    }
+
+    @include lg-min {
+      height: 768px;
+    }
+
+    @include xl-min {
+      height: 800px;
+    }
+
+    @include ul-min {
+      height: 1000px;
+    }
+  }
+
+  &__screen {
+    @include bg_image;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/big_logo.svg");
+   
+    @include md-min {
+      width: 893px;
+    }
+
+    @include lg-min {
+      width: 670px;
+    }
+
+    @include xl-min {
+      width: 697px;
+    }
+
+    @include ul-min {
+      width: 872px;
+    }
+  }
+
+  &__img {
+    width: auto;
+    height: 100%;
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-basic-white;
+    font-weight: 700;
+    font-size: $font-size-xx;
+    text-align: center;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-grey-text;
+    }
+
+    @include md-min {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../images/button.svg");
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+
+    &:hover {
+      background: url("../images/button_active.svg");
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 30px;
+
+    @include md-min {
+      gap: 60px;
+      padding: 0 60px;
+    }
+
+    @include xl-min {
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 0;
+    }
+
+    &--spec {
+      padding-top: 132px;
+
+      @include md-min {
+        padding-top: 270px;
+      }
+
+      @include lg-min {
+        padding-top: 210px;
+      }
+
+      @include xl-min {
+        padding-top: 170px;
+      }
+    }
+
+    .tabs {
+      &.close {
+        display: none;
+      }
+
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      @include md-min {
+        gap: 60px;
+      }
+
+      @include lg-min {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      @include xl-min {
+        padding: 0 180px;
+      }
+
+      @include ul-min {
+        padding: 0 280px;
+      }
+
+      &__list {
+        display: flex;
+        gap: 30px;
+        padding-bottom: 30px;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        @include md-min {
+          padding-bottom: 60px;
+        }
+
+        @include lg-min {
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 30px;
+          width: auto;
+          padding-right: 60px;
+          padding-bottom: 0;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          flex-shrink: 0;
+        }
+      }
+
+      &__item {
+        font-size: $font-size-xl;
+        font-weight: 700;
+        color: $color-grey-text;
+        cursor: pointer;
+
+        &.active {
+          @include text_color;
+        }
+
+        &:hover {
+          color: $color-accent;
+        }
+
+        &--md {
+          @include md-min {
+            font-size: $font-size-xx;
+          }
+        }
+      }
+
+      .content-wrap {
+        @include xl-min {
+          align-self: center;
+        }
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        font-size: $font-size-lg;
+        color: $color-basic-white;
+
+        &.hide {
+          display: none;
+        }
+      }
+
+      &__heading {
+        font-weight: 700;
+
+        &--md {
+          @include md-min {
+            font-size: $font-size-xl;
+          }
+        }
+      }
+
+      &__description {
+        line-height: $font-size-xl;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 5.97%;
+    width: 89.1%;
+    height: 10px;
+    border-radius: 0px 0px 12px 12px;
+    background: #cacadb;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 13.56%;
+    width: 78.46%;
+    height: 10px;
+    border-radius: 0px 0px 12px 12px;
+    background: #e7e7f2;
+  }
+}

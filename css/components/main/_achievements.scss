@@ -1,0 +1,127 @@
+.achievements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 60px;
+  background-color: $color-grey-bg;
+
+  @include ul-min {
+    padding: 30px 160px;
+  }
+
+  &__title {
+    color: $color-main;
+    font-size: $font-size-sm;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+
+    &.hide {
+      display: none;
+    }
+
+    @include md-min {
+      gap: 40px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 90px;
+    border-radius: 12px;
+    background: $color-basic-white;
+
+    @include md-min {
+      width: calc((100% - 120px) / 4);
+    }
+
+    @include xl-min {
+      height: 110px;
+    }
+
+    img {
+      @include md-min {
+        height: 40px;
+      }
+
+      @include lg-min {
+        height: 60px;
+      }
+    }
+
+    &.legal {
+      img {
+        width: 53.333px;
+
+        @include lg-min {
+          width: 80px;
+        }
+      }
+    }
+
+    &.award {
+      img {
+        width: 106px;
+
+        @include lg-min {
+          width: 159px;
+        }
+      }
+    }
+
+    &.leaders {
+      img {
+        width: 130px;
+
+        @include lg-min {
+          width: 195px;
+        }
+      }
+    }
+
+    &.firm {
+      img {
+        width: 110.67px;
+        @include lg-min {
+          width: 166px;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 14px;
+
+    .btn {
+      @include circle__btn;
+
+      &:hover {
+        color: $color-active-regular;
+        opacity: 0.6;
+      }
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}

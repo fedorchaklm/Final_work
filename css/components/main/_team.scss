@@ -1,0 +1,459 @@
+.team {
+  padding: 50px 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 60px;
+
+  @include md-min {
+    padding: 80px 60px 0;
+  }
+
+  @include ul-min {
+    padding: 80px 160px 0;
+  }
+
+  &--spec {
+    padding: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+
+    &--spec {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, auto);
+      row-gap: 30px;
+      padding: 0;
+
+      @include md-min {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 60px;
+      }
+
+      @include lg-min {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+      }
+
+      @include xl-min {
+        padding: 0;
+      }
+    }
+
+    &--individ {
+      padding: 0 0 30px 0;
+
+      @include md-min {
+        padding-bottom: 60px;
+      }
+    }
+
+    .line {
+      @include md-min {
+        grid-column: 1 / 3;
+      }
+
+      @include lg-min {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+    }
+  }
+
+  &__item {
+    &.hide {
+      display: none;
+    }
+
+    display: flex;
+    flex-direction: column;
+    background-color: $color-grey-bg;
+    border-radius: 12px;
+
+    @include lg-min {
+      flex-direction: row;
+    }
+
+    &--spec {
+      background-color: $color-basic-white;
+      gap: 15px;
+
+      @include lg-min {
+        flex-direction: column;
+      }
+    }
+
+    &--individ {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+      row-gap: 30px;
+
+      @include md-min {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        width: 100%;
+      }
+
+      @include lg-min {
+        grid-template-columns: repeat(2, auto);
+        column-gap: 60px;
+      }
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__img {
+    @include bg_image;
+    width: 100%;
+    height: 500px;
+    border-radius: 12px 12px 0px 0px;
+
+    @include lg-min {
+      width: 400px;
+      flex-shrink: 0;
+      border-radius: 12px 0 0 12px;
+    }
+
+    @include xl-min {
+      height: auto;
+    }
+
+    &#alexandrovsky {
+      background-image: url("../images/team_alexandrovsky.svg");
+    }
+
+    &#patrikov {
+      background-image: url("../images/team_patrikov.svg");
+    }
+
+    &#melnik {
+      background-image: url("../images/team_melnik.svg");
+    }
+
+    &#binn {
+      background-image: url("../images/team_binn.svg");
+    }
+
+    &#cobzar {
+      background-image: url("../images/team_cobzar.svg");
+    }
+
+    &#wolk {
+      background-image: url("../images/team_wolk.svg");
+    }
+
+    &--spec {
+      height: 300px;
+      border-radius: 12px;
+
+      @include md-min {
+        height: 400px;
+      }
+
+      @include lg-min {
+        width: 100%;
+        border-radius: 12px;
+      }
+
+      @include xl-min {
+        height: 400px;
+      }
+    }
+
+    &--individ {
+      width: 100%;
+      height: 375px;
+      border-radius: 12px;
+
+      @include md-min {
+        width: 300px;
+      }
+
+      @include lg-min {
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+      }
+
+      @include xl-min {
+        height: 500px;
+        width: 400px;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include md-min {
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
+    }
+
+    @include lg-min {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+
+    @include xl-min {
+      width: 100%;
+      align-self: start;
+    }
+
+    &--spec {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+      gap: 5px 15px;
+      padding: 0;
+    }
+
+    &--individ {
+      padding: 0;
+      gap: 15px;
+
+      @include lg-min {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+
+      @include xl-min {
+        display: grid;
+        grid-template-columns: auto 6px auto 6px auto;
+        grid-template-rows: repeat(2, auto);
+        column-gap: 10px;
+        align-items: center;
+        justify-content: start;
+
+        .dot-separator {
+          border-radius: 50%;
+          width: 6px;
+          height: 6px;
+          background-color: $color-grey-separator;
+          justify-self: center;
+
+          &:first-child {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+          }
+
+          &:last-child {
+            grid-column: 4 / 5;
+            grid-row: 2 / 3;
+          }
+        }
+      }
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: $color-active-regular;
+    font-size: $font-size-sm;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: fit-content;
+
+    &:after {
+      @include bg_image;
+      content: "";
+      display: block;
+      height: 13px;
+      width: 12px;
+      background-image: url("../images/arrow.svg");
+      background-size: contain;
+    }
+
+    &:hover {
+      color: $color-accent;
+    }
+
+    &:hover:after {
+      background-image: url("../images/arrow_active.svg");
+    }
+
+    &--spec {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      align-self: start;
+      justify-self: end;
+
+      &:after {
+        content: "";
+        display: block;
+        height: 32px;
+        width: 32px;
+        background-image: url("../images/more.svg");
+      }
+
+      &:hover:after {
+        background-image: url("../images/more_active.svg");
+      }
+    }
+  }
+
+  &__heading {
+    @include text_color;
+    width: 100%;
+    font-size: $font-size-xl;
+    font-weight: 700;
+    line-height: normal;
+
+    &--md {
+      @include md-min {
+        font-size: $font-size-xx;
+      }
+    }
+    &--spec {
+      @include lg-min {
+        padding: 0 120px;
+      }
+    }
+  }
+
+  &__name {
+    font-size: $font-size-md;
+    color: $color-grey-text;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-accent;
+    }
+
+    &--spec {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      color: $color-main;
+
+      &:hover,
+      &:has(~ .team__link--spec:hover) {
+        color: $color-accent;
+      }
+
+      &:hover ~ .team__link--spec:after {
+        background-image: url("../images/more_active.svg");
+      }
+    }
+
+    &--individ {
+      color: $color-accent;
+      font-size: $font-size-xx;
+      cursor: auto;
+
+      @include xl-min {
+        grid-column: 1 / 6;
+        grid-row: 1 / 2;
+      }
+    }
+  }
+
+  &__position {
+    color: $color-grey-text;
+    font-size: $font-size-sm;
+    line-height: $font-size-larger;
+
+    &--spec {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    &--individ {
+      @include xl-min {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+    }
+  }
+
+  &__email,
+  &__profile {
+    color: $color-active-regular;
+
+    @include xl-min {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
+  }
+
+  &__email {
+    @include xl-min {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
+  }
+
+  &__profile {
+    @include xl-min {
+      grid-column: 5 / 6;
+      grid-row: 2 / 3;
+    }
+  }
+  &__practice,
+  &__education,
+  &__experience {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: $color-basic-black;
+    line-height: $font-size-xl;
+
+    .education__heading,
+    .experience__heading {
+      color: $color-main;
+      font-size: $font-size-sm;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    width: 78px;
+    height: 16px;
+
+    .btn {
+      @include circle__btn;
+
+      &:hover {
+        color: $color-active-regular;
+        opacity: 0.6;
+      }
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}

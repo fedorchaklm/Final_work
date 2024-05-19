@@ -1,0 +1,50 @@
+@mixin button_cta {
+  padding: 18px 30px;
+  border-radius: 12px;
+  border: 2px solid $color-active-regular;
+  background-color: $color-active-regular;
+  box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.5);
+  color: $color-basic-white;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-active-hover;
+  }
+
+  &:active {
+    background: $color-active;
+  }
+}
+
+@mixin dot($color, $size: 6px) {
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+  min-width: $size;
+  min-height: $size;
+  background-color: $color;
+}
+
+@mixin circle__btn {
+  background-color: $color-active-regular;
+  border-radius: 50%;
+  opacity: 0.2;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+@mixin bg_image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin text_color {
+  background: $color-gradient-red-text;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

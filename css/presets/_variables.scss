@@ -1,0 +1,59 @@
+$color-main: #323264;
+$color-main-alt: #46466e;
+$color-main-soft: #686887;
+$color-basic-white: #fff;
+$color-basic-black: #000;
+$color-accent: #f0145a;
+$color-active-regular: #24a3ff;
+$color-active-hover: #0085ff;
+$color-active: #006ccf;
+$color-grey-bg: #f5f5fa;
+$color-grey-bg-alt: #ededf7;
+$color-grey-text: #b3b3ba;
+$color-grey-separator: #e6e6f0;
+$color-gradient: linear-gradient(
+  128.63deg,
+  #323264 0%,
+  #323264 73.96%,
+  #a54b5f 100%
+);
+$color-gradient-soft: linear-gradient(
+  42.01deg,
+  #323264 14.33%,
+  #323264 51.39%,
+  #7a425e 87.53%
+);
+$color-gradient-red: linear-gradient(323.35deg, #f0145a 6.7%, #693264 70.36%);
+$color-gradient-supersoft: linear-gradient(
+  228.57deg,
+  #323264 11.93%,
+  #323264 57.17%,
+  #643e72 87.46%
+);
+$color-gradient-red-text: linear-gradient(
+  90.13deg,
+  #f0145a 0.84%,
+  #ef8080 99.96%
+);
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-md: 1rem; // 16px
+$font-size-lg: 1.25rem; // 20px
+$font-size-larger: 1.375rem; // 22px
+$font-size-xl: 1.875rem; // 30px
+$font-size-xx: 2.375rem; // 38px
+$font-family: "Monteserrat-Regular";
+$ul: 1920px;
+$xl: 1440px;
+$lg: 1024px;
+$md: 768px;
+
+@font-face {
+  font-family: "Monteserrat-Regular";
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Monteserrat-Bold";
+  src: url("../fonts/Montserrat-Bold.ttf");
+}

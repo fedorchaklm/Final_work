@@ -1,0 +1,124 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  font-size: $font-size-md;
+  background-color: $color-grey-bg;
+
+  @include md-min {
+    padding: 30px 60px;
+  }
+
+  @include ul-min {
+    padding: 30px 160px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 21px;
+
+    @include md-min {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+      justify-items: start;
+    }
+
+    @include lg-min {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      width: 100%;
+    }
+
+    .adress {
+      grid-row: 1 / 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s;
+
+      @include md-min {
+        grid-row: 1 / 2;
+        flex-direction: row;
+      }
+
+      @include lg-min {
+        grid-column: 1 / 2;
+        justify-content: flex-start;
+      }
+
+      &__heading {
+        color: $color-main;
+      }
+
+      &__location {
+        color: $color-active-regular;
+        font-size: $font-size-xs;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $color-accent;
+        }
+      }
+    }
+
+    .contacts {
+      grid-row: 2 / 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      transition: all 0.3s;
+
+      @include md-min {
+        flex-direction: row;
+      }
+
+      @include lg-min {
+        grid-column: 1 / 2;
+      }
+
+      &__phone {
+        color: $color-main-alt;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $color-accent;
+        }
+      }
+
+      &__email {
+        color: $color-active-regular;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $color-accent;
+        }
+      }
+    }
+
+    .policy {
+      grid-row: 3 / 4;
+      color: $color-grey-text;
+
+      @include md-min {
+        justify-self: center;
+      }
+
+      @include lg-min {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        justify-self: end;
+      }
+    }
+  }
+}

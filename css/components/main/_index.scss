@@ -1,0 +1,98 @@
+@import "splash";
+@import "team";
+@import "clients";
+@import "publications";
+@import "form";
+@import "content";
+@import "about";
+@import "experience";
+@import "achievements";
+
+.main {
+  background-color: $color-basic-white;
+
+  &--team {
+    min-height: calc(100vh - 138px);
+    padding: 139px 30px 0 30px;
+
+    @include md-min {
+      padding: 274px 60px 0 60px;
+    }
+
+    @include lg-min {
+      padding: 170px 60px 0 60px;
+    }
+
+    @include ul-min {
+      padding: 170px 160px 0 160px;
+    }
+  }
+
+  &--publications {
+    padding-top: 139px;
+
+    @include md-min {
+      padding-top: 274px;
+    }
+
+    @include lg-min {
+      padding-top: 170px;
+    }
+  }
+
+  &--contacts,
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: $font-size-larger;
+    line-height: $font-size-xl;
+    width: 100%;
+  }
+
+  .info {
+    color: $color-main;
+
+    @include lg-min {
+      width: calc(50% - 30px);
+    }
+  }
+
+  &--contacts {
+    padding-bottom: 60px;
+    color: $color-main-alt;
+
+    @include md-min {
+      gap: 60px;
+    }
+
+    @include lg-min {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 60px;
+    }
+
+    @include xl-min {
+      padding-left: 180px;
+      padding-right: 180px;
+    }
+  }
+
+  .email {
+    color: $color-active-regular;
+  }
+
+  .services-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: $color-gradient-supersoft;
+    height: 100vh;
+    padding: 139px 30px 0;
+  }
+
+  .media-wrap {
+    display: flex;
+    gap: 10px;
+  }
+}

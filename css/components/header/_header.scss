@@ -1,0 +1,34 @@
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+
+  @include md-min {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    padding: 50px 60px 0 60px;
+    row-gap: 30px;
+  }
+
+  @include lg-min {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 16px;
+  }
+
+  @include ul-min {
+    padding: 50px 160px 0 160px;
+  }
+
+  &--spec {
+    background-color: $color-basic-white;
+
+    @include md-min {
+      padding-bottom: 60px;
+    }
+  }
+}

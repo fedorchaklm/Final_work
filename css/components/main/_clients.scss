@@ -1,0 +1,91 @@
+.clients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  &--spec {
+    padding-top: 60px;
+  }
+
+  &__heading {
+    font-size: $font-size-sm;
+    font-weight: 700;
+    color: $color-main;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    width: 100%;
+
+    @include md-min {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+
+    @include lg-min {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+    cursor: pointer;
+
+    &:first-child {
+      background-color: #1c4280;
+    }
+
+    &:nth-child(2) {
+      background-color: #143646;
+    }
+
+    &:nth-child(3) {
+      background: linear-gradient(0deg, #f48b30 0%, #f48b30 100%), #f48b30;
+    }
+
+    &:nth-child(4) {
+      background-color: #9e4dc3;
+    }
+
+    &:nth-child(5) {
+      background-color: #fd9339;
+    }
+
+    &:nth-child(6) {
+      background-color: #e2e2e4;
+    }
+
+    &:nth-child(7) {
+      background-color: #c71c36;
+    }
+
+    &:nth-child(8) {
+      background-color: #dcf3f9;
+    }
+
+    &:nth-child(9) {
+      background-color: #eaeaea;
+    }
+
+    &:nth-child(10) {
+      background-color: #282240;
+    }
+
+    &:nth-child(11) {
+      background-color: #1d4568;
+    }
+
+    &:last-child {
+      background-color: #000;
+    }
+  }
+}

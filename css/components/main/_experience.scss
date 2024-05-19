@@ -1,0 +1,41 @@
+.experience {
+  display: grid;
+  grid-template-columns: 32px auto;
+  grid-template-rows: 32px auto;
+  gap: 10px 8px;
+  align-items: center;
+
+  &__img {
+    @include bg_image;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 32px;
+    height: 32px;
+
+    &#flag {
+      background-image: url("../images/flag.svg");
+    }
+
+    &#bag {
+      background-image: url("../images/bag.svg");
+    }
+
+    &#star {
+      background-image: url("../images/star.svg");
+    }
+  }
+
+  &__number {
+    @include text_color;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-size: 2.25rem;
+    font-weight: 700;
+  }
+
+  &__text {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    color: $color-main;
+  }
+}

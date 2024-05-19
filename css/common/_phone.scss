@@ -1,0 +1,20 @@
+.phone {
+  font-size: $font-size-md;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &--individ {
+    font-size: 1.3125rem;
+  }
+
+  &--spec {
+    color: $color-grey-text;
+    font-weight: 700;
+  }
+  
+  &:hover {
+    color: $color-accent;
+  }
+
+}
