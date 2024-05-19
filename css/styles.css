@@ -1791,11 +1791,11 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 375px;
+  width: calc(100% - 60px);
 }
 @media (min-width: 1440px) {
   .contact--popup {
-    width: 650px;
+    width: calc(100% - 120px);
   }
 }
 .contact--menu {
